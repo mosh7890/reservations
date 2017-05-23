@@ -6,7 +6,17 @@ var reservations = {
 var name = prompt('Please enter the name for your reservation');
 
 var claimReservation = function () {
-  // write your code here!
+  if (name in reservations) {
+    if (reservations[name]['claimed']) {
+      alert("Your Spot Has Been Taken.")
+    }
+    else {
+      alert("Welcome!");
+    }
+  }
+  else {
+    alert("You Have No Reservation");
+  }
 }
 
 claimReservation();
