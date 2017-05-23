@@ -1,9 +1,9 @@
 var reservations = {
-  'Bob': { claimed: false },
-  'Ted': { claimed: true }
+  'bob': { claimed: false },
+  'ted': { claimed: true }
 }
 
-var name = prompt('Please enter the name for your reservation');
+var name = prompt('Please enter the name for your reservation').toLowerCase();
 
 var claimReservation = function () {
   if (name in reservations) {
@@ -15,7 +15,7 @@ var claimReservation = function () {
     }
   }
   else {
-    reservations[name] = {claimed: true};
+    reservations[name] = { claimed: true };
     alert("A table has opened up, Welcome!");
   }
 }
